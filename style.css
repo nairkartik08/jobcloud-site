@@ -488,3 +488,19 @@ footer .social-icons a {
   }
 }
 
+@media (max-width: 600px) {
+  .profile .dropdown-content {
+    right: auto;
+    left: 0;
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #ffffff;
+    z-index: 9999;
+  }
+
+  .profile .dropdown-content a {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
