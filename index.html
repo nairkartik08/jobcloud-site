@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+
   <nav>
     <div class="logo">
       <img src="jobcloud12.png" alt="Job Cloud Logo" />
@@ -29,28 +30,21 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <h1>Find Your Dream Job Today</h1>
-    <p>Search thousands of jobs from top companies and start your career journey.</p>
-    <a href="#" class="cta-btn">Get Started</a>
-
-    <section class="job-posting">
-  <form id="jobSearchForm" class="search-form">
-    <div class="input-group">
-      <i class="fa-solid fa-briefcase"></i>
-      <input type="text" id="companySearch" placeholder="Job Title or Company" required />
-    </div>
-    <div class="input-group">
-      <i class="fa-solid fa-location-dot"></i>
-      <input type="text" id="locationSearch" placeholder="Location (e.g., Mumbai)" />
-    </div>
-    <button type="submit" class="search-btn">
-      <i class="fa-solid fa-magnifying-glass"></i> Search
-    </button>
-  </form>
-  <div id="jobResults" class="job-results"></div>
-</section>
-
+  <section class="job-posting">
+    <form id="jobSearchForm" class="search-form">
+      <div class="input-group">
+        <i class="fa-solid fa-briefcase"></i>
+        <input type="text" id="companySearch" placeholder="Job Title or Company" />
+      </div>
+      <div class="input-group">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" id="locationSearch" placeholder="Location (e.g., Mumbai)" />
+      </div>
+      <button type="submit" class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i> Search
+      </button>
+    </form>
+    <div id="jobResults" class="job-results"></div>
   </section>
 
   <section class="features">
@@ -86,9 +80,7 @@
     </div>
   </section>
 
-  <section class="job-search">
-    <div class="job-search-container"></div>
-  </section>
+  <!-- ✅ Removed: Latest Job Openings -->
 
   <section class="testimonials">
     <h2>What Our Users Say</h2>
@@ -117,6 +109,7 @@
   <footer>
     <div class="footer-content">
       <p>&copy; 2024 Job Cloud. All rights reserved.</p>
+      <!-- ✅ Newsletter removed -->
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
@@ -135,6 +128,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
