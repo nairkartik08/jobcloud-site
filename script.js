@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Sample job data
   const jobs = [
-    { title: "Software Engineer", company: "Google", location: "Bengaluru" },
-    { title: "UI/UX Designer", company: "Adobe", location: "Remote" },
-    { title: "Data Analyst", company: "Amazon", location: "Hyderabad" },
-    { title: "Marketing Intern", company: "Flipkart", location: "Mumbai" },
-    { title: "Technical Writer", company: "Zoho", location: "Chennai" },
-    { title: "Cloud Engineer", company: "Microsoft", location: "Pune" },
-    { title: "Web Developer", company: "TCS", location: "Mumbai" }
+    { title: "Software Engineer", company: "Google", location: "Bengaluru", page: "google.html" },
+    { title: "UI/UX Designer", company: "Adobe", location: "Remote", page: "adobe.html" },
+    { title: "Data Analyst", company: "Amazon", location: "Hyderabad", page: "amazon.html" },
+    { title: "Marketing Intern", company: "Flipkart", location: "Mumbai", page: "flipkart.html" },
+    { title: "Technical Writer", company: "Zoho", location: "Chennai", page: "zoho.html" },
+    { title: "Cloud Engineer", company: "Microsoft", location: "Pune", page: "microsoft.html" },
+    { title: "Web Developer", company: "TCS", location: "Mumbai", page: "tcs.html" }
   ];
 
   // Handle search
@@ -23,24 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const companySearch = companyInput.value.toLowerCase();
     const locationSearch = locationInput.value.toLowerCase();
 
-    jobResults.innerHTML = ""; // clear old results
-
-    const filtered = jobs.filter(job =>
+    // Find a match
+    const match = jobs.find(job =>
       job.company.toLowerCase().includes(companySearch) &&
       job.location.toLowerCase().includes(locationSearch)
     );
 
-    if (filtered.length > 0) {
-      filtered.forEach(job => {
-        const div = document.createElement("div");
-        div.classList.add("job-card");
-        div.innerHTML = `
-          <h3>${job.title}</h3>
-          <p>${job.company} • ${job.location}</p>
-          <button class="apply-btn">Apply Now</button>
-        `;
-        jobResults.appendChild(div);
-      });
+    if (match) {
+      // ✅ Redirect to the job/company page
+      window.location.href = match.page;
     } else {
       jobResults.innerHTML = `<p style="color:red;">No jobs found</p>`;
     }
