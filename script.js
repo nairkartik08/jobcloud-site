@@ -1,39 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ Script loaded");
-
-  const jobSearchForm = document.getElementById("jobSearchForm");
-  const companyInput = document.getElementById("companySearch");
-  const locationInput = document.getElementById("locationSearch");
+  const searchForm = document.getElementById("searchForm");
+  const companyInput = document.getElementById("companyInput");
+  const locationInput = document.getElementById("locationInput");
   const jobResults = document.getElementById("jobResults");
 
-  // Sample job data
+  // Sample job database
   const jobs = [
-    { title: "Software Engineer", company: "Google", location: "Bengaluru", page: "google.html" },
-    { title: "UI/UX Designer", company: "Adobe", location: "Remote", page: "adobe.html" },
-    { title: "Data Analyst", company: "Amazon", location: "Hyderabad", page: "amazon.html" },
-    { title: "Marketing Intern", company: "Flipkart", location: "Mumbai", page: "flipkart.html" },
-    { title: "Technical Writer", company: "Zoho", location: "Chennai", page: "zoho.html" },
-    { title: "Cloud Engineer", company: "Microsoft", location: "Pune", page: "microsoft.html" },
-    { title: "Web Developer", company: "TCS", location: "Mumbai", page: "tcs.html" }
+    { title: "Software Engineer", company: "TCS", location: "Mumbai" },
+    { title: "Data Analyst", company: "TCS", location: "Pune" },
+    { title: "Web Developer", company: "Infosys", location: "Bangalore" },
+    { title: "System Engineer", company: "Wipro", location: "Hyderabad" },
+    { title: "Finance Executive", company: "TCS", location: "Delhi" },
+    { title: "Marketing Manager", company: "Reliance", location: "Mumbai" }
   ];
 
   // Handle search
-  jobSearchForm.addEventListener("submit", (e) => {
+  searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const companySearch = companyInput.value.toLowerCase();
-    const locationSearch = locationInput.value.toLowerCase();
+    const companyQuery = companyInput.value.trim().toLowerCase();
+    const locationQuery = locationInput.value.trim().toLowerCase();
 
-    // Find a match
-    const match = jobs.find(job =>
-      job.company.toLowerCase().includes(companySearch) &&
-      job.location.toLowerCase().includes(locationSearch)
-    );
+    // Filter jobs based on company and location
+    const filteredJobs = jobs.filter((job) => {
+      const matchesCompany =
+        companyQuery === "" ||
+        job.company.toLowerCase().includes(companyQuery) ||
+        job.title.toLowerCase().includes(companyQuery);
 
-    if (match) {
-      // ✅ Redirect to the job/company page
-      window.location.href = match.page;
+      const matchesLocation =
+        locationQuery === "" ||
+        job.location.toLowerCase().includes(locationQuery);
+
+      return matchesCompany && matchesLocation;
+    });
+
+    // Display results
+    jobResults.innerHTML = "";
+    if (filteredJobs.length > 0) {
+      filteredJobs.forEach((job) => {
+        const jobCard = document.createElement("div");
+        jobCard.classList.add("job-card");
+        jobCard.innerHTML = `
+          <h3>${job.title}</h3>
+          <p><strong>Company:</strong> ${job.company}</p>
+          <p><strong>Location:</strong> ${job.location}</p>
+        `;
+        jobResults.appendChild(jobCard);
+      });
     } else {
-      jobResults.innerHTML = `<p style="color:red;">No jobs found</p>`;
+      jobResults.innerHTML = "<p>No jobs found for your search.</p>";
     }
   });
 });
+
