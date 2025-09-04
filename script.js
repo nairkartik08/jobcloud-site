@@ -1,52 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const searchForm = document.getElementById("jobSearchForm");
+  console.log("✅ Script loaded");
+
+  const jobSearchForm = document.getElementById("jobSearchForm");
   const companyInput = document.getElementById("companySearch");
   const locationInput = document.getElementById("locationSearch");
   const jobResults = document.getElementById("jobResults");
 
+  // Sample job data
   const jobs = [
-    { title: "Software Engineer", company: "TCS", location: "Mumbai" },
-    { title: "Data Analyst", company: "TCS", location: "Pune" },
-    { title: "Web Developer", company: "Infosys", location: "Bangalore" },
-    { title: "System Engineer", company: "Wipro", location: "Hyderabad" },
-    { title: "Finance Executive", company: "TCS", location: "Delhi" },
-    { title: "Marketing Manager", company: "Reliance", location: "Mumbai" }
+    { title: "Software Engineer", company: "Google", location: "Bengaluru" },
+    { title: "UI/UX Designer", company: "Adobe", location: "Remote" },
+    { title: "Data Analyst", company: "Amazon", location: "Hyderabad" },
+    { title: "Marketing Intern", company: "Flipkart", location: "Mumbai" },
+    { title: "Technical Writer", company: "Zoho", location: "Chennai" },
+    { title: "Cloud Engineer", company: "Microsoft", location: "Pune" },
+    { title: "Web Developer", company: "TCS", location: "Mumbai" }
   ];
 
-  searchForm.addEventListener("submit", (e) => {
+  // Handle search
+  jobSearchForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const companyQuery = companyInput.value.trim().toLowerCase();
-    const locationQuery = locationInput.value.trim().toLowerCase();
+    const companySearch = companyInput.value.toLowerCase();
+    const locationSearch = locationInput.value.toLowerCase();
 
-    const filteredJobs = jobs.filter((job) => {
-      const matchesCompany =
-        companyQuery === "" ||
-        job.company.toLowerCase().includes(companyQuery) ||
-        job.title.toLowerCase().includes(companyQuery);
+    jobResults.innerHTML = ""; // clear old results
 
-      const matchesLocation =
-        locationQuery === "" ||
-        job.location.toLowerCase().includes(locationQuery);
+    const filtered = jobs.filter(job =>
+      job.company.toLowerCase().includes(companySearch) &&
+      job.location.toLowerCase().includes(locationSearch)
+    );
 
-      return matchesCompany && matchesLocation;
-    });
-
-    jobResults.innerHTML = "";
-    if (filteredJobs.length > 0) {
-      filteredJobs.forEach((job) => {
-        const jobCard = document.createElement("div");
-        jobCard.classList.add("job-card");
-        jobCard.innerHTML = `
+    if (filtered.length > 0) {
+      filtered.forEach(job => {
+        const div = document.createElement("div");
+        div.classList.add("job-card");
+        div.innerHTML = `
           <h3>${job.title}</h3>
-          <p><strong>Company:</strong> ${job.company}</p>
-          <p><strong>Location:</strong> ${job.location}</p>
+          <p>${job.company} • ${job.location}</p>
+          <button class="apply-btn">Apply Now</button>
         `;
-        jobResults.appendChild(jobCard);
+        jobResults.appendChild(div);
       });
     } else {
-      jobResults.innerHTML = "<p>No jobs found for your search.</p>";
+      jobResults.innerHTML = `<p style="color:red;">No jobs found</p>`;
     }
   });
 });
-
-
