@@ -34,23 +34,23 @@
     <p>Search thousands of jobs from top companies and start your career journey.</p>
     <a href="#" class="cta-btn">Get Started</a>
 
-    <!-- 🔹 FIXED SEARCH FORM -->
     <section class="job-posting">
-      <form class="search-form" id="searchForm">
-        <div class="input-group">
-          <i class="fa-solid fa-briefcase"></i>
-          <input type="text" id="companyInput" placeholder="Job Title or Company" required />
-        </div>
-        <div class="input-group">
-          <i class="fa-solid fa-location-dot"></i>
-          <input type="text" id="locationInput" placeholder="Location (e.g., Mumbai)" />
-        </div>
-        <button type="submit" class="search-btn">
-          <i class="fa-solid fa-magnifying-glass"></i> Search
-        </button>
-      </form>
-      <div id="jobResults" class="job-results"></div>
-    </section>
+  <form id="jobSearchForm" class="search-form">
+    <div class="input-group">
+      <i class="fa-solid fa-briefcase"></i>
+      <input type="text" id="companySearch" placeholder="Job Title or Company" required />
+    </div>
+    <div class="input-group">
+      <i class="fa-solid fa-location-dot"></i>
+      <input type="text" id="locationSearch" placeholder="Location (e.g., Mumbai)" />
+    </div>
+    <button type="submit" class="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i> Search
+    </button>
+  </form>
+  <div id="jobResults" class="job-results"></div>
+</section>
+
   </section>
 
   <section class="features">
@@ -135,6 +135,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
