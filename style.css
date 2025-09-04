@@ -35,7 +35,6 @@ nav .logo img {
   padding: 5px;
 }
 
-
 nav text {
   font-size: 32px;
   font-weight: bold;
@@ -395,26 +394,6 @@ footer .footer-links {
   margin-top: 10px;
 }
 
-footer .newsletter {
-  margin-top: 20px;
-}
-
-footer .newsletter input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-footer .newsletter button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #1d624e;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 footer .social-icons {
   margin-top: 20px;
 }
@@ -538,25 +517,4 @@ footer .social-icons a {
 
 .customer-support h2 {
   font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.customer-support p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.customer-support a {
-  color: #1d624e;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.customer-support a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-
+  margin-bottom: 15px
