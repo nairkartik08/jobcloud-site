@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const searchForm = document.getElementById("searchForm");
-  const companyInput = document.getElementById("companyInput");
-  const locationInput = document.getElementById("locationInput");
+  const searchForm = document.getElementById("jobSearchForm");
+  const companyInput = document.getElementById("companySearch");
+  const locationInput = document.getElementById("locationSearch");
   const jobResults = document.getElementById("jobResults");
 
-  // Sample job database
   const jobs = [
     { title: "Software Engineer", company: "TCS", location: "Mumbai" },
     { title: "Data Analyst", company: "TCS", location: "Pune" },
@@ -14,13 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     { title: "Marketing Manager", company: "Reliance", location: "Mumbai" }
   ];
 
-  // Handle search
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const companyQuery = companyInput.value.trim().toLowerCase();
     const locationQuery = locationInput.value.trim().toLowerCase();
 
-    // Filter jobs based on company and location
     const filteredJobs = jobs.filter((job) => {
       const matchesCompany =
         companyQuery === "" ||
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return matchesCompany && matchesLocation;
     });
 
-    // Display results
     jobResults.innerHTML = "";
     if (filteredJobs.length > 0) {
       filteredJobs.forEach((job) => {
@@ -52,4 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
