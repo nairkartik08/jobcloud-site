@@ -2,75 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Job Portal</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Cloud</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">JobPortal</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
+  <nav>
+    <div class="logo">
+      <img src="jobcloud12.png" alt="Job Cloud Logo" />
+    </div>
+    <text>Job Cloud</text>
+    <button class="post-job">Post Job</button>
+    <div class="home"><a href="#">Home</a></div>
+    <div class="connections"><a href="#">Connections</a></div>
+    <div class="learning"><a href="#">Learning</a></div>
+    <div class="sign-in"><a href="login.html">Sign In</a></div>
+    <div class="profile dropdown">
+      <i class="fa-solid fa-user" style="color: #1d624e"></i>
+      <span class="profile-text">Profile</span>
+      <div class="dropdown-content">
+        <a href="#">View Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
   <section class="hero">
-    <h1>Find Your Dream Job</h1>
-    <p>Search among the best opportunities in top industries.</p>
-    <div class="search-bar">
-      <input type="text" placeholder="Job title, keyword...">
-      <button>Search</button>
+    <h1>Find Your Dream Job Today</h1>
+    <p>Search thousands of jobs from top companies and start your career journey.</p>
+    <a href="#" class="cta-btn">Get Started</a>
+    <section class="job-posting">
+      <form class="search-form">
+        <div class="input-group">
+          <i class="fa-solid fa-briefcase"></i>
+          <input type="text" placeholder="Job Title or Company" required />
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Location (e.g., Mumbai)" />
+        </div>
+        <button type="submit" class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </form>
+    </section>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Job Cloud?</h2>
+    <div class="feature-boxes">
+      <div class="feature">
+        <i class="fa-solid fa-briefcase"></i>
+        <h4>Verified Jobs</h4>
+        <p>All job listings are screened and trusted.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-users"></i>
+        <h4>Strong Network</h4>
+        <p>Connect with recruiters and professionals.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-rocket"></i>
+        <h4>Career Growth</h4>
+        <p>Find jobs that match your passion and skills.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Categories Section -->
-  <section class="categories">
-    <h2>Top Job Categories</h2>
-    <div class="category-grid">
-      <div class="category-card">Engineering</div>
-      <div class="category-card">Finance</div>
-      <div class="category-card">Information Technology</div>
-      <div class="category-card">Marketing</div>
-      <div class="category-card">Product Management</div>
-      <div class="category-card">Accounting</div>
+  <section class="job-categories">
+    <h2>Find the right job or internship for you</h2>
+    <div class="category-tags">
+      <span>Engineering</span>
+      <span>Finance</span>
+      <span>Information Technology</span>
+      <span>Marketing</span>
+      <span>Product Management</span>
+      <span>Accounting</span>
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="testimonials">
     <h2>What Our Users Say</h2>
-    <div class="testimonial">
-      <p>"This portal helped me land my first IT job. Highly recommend!"</p>
-      <span>- Aditi, Software Engineer</span>
-    </div>
-    <div class="testimonial">
-      <p>"Very easy to use and has genuine listings across industries."</p>
-      <span>- Raj, Marketing Specialist</span>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>"Job Cloud helped me land my dream job in just 2 weeks!"</p>
+        <h4>- Priya, UI Designer</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Amazing platform to connect with top recruiters easily."</p>
+        <h4>- Raj, Data Analyst</h4>
+      </div>
+      <div class="testimonial">
+        <p>"It’s better than any job site I’ve used before. Very clean and fast."</p>
+        <h4>- Aisha, Product Manager</h4>
+      </div>
     </div>
   </section>
 
-  <!-- Support -->
-  <section class="support">
+  <section class="customer-support">
     <h2>Need Help?</h2>
-    <p>Contact our support team for assistance anytime.</p>
-    <button>Contact Us</button>
+    <p>Our support team is here 24/7 to assist you with your queries.</p>
+    <a href="mailto:support@jobcloud.com">📧 support@jobcloud.com</a>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 JobPortal. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2024 Job Cloud. All rights reserved.</p>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe via Email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-contact">
+        <p>Contact us: <a href="mailto:contact@jobcloud.com">contact@jobcloud.com</a></p>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
-
-
 
 
 
