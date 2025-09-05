@@ -691,3 +691,95 @@ footer .social-icons a {
     padding: 40px;
   }
 }
+
+/* New CSS to style the job listing pages */
+.job-cards-container {
+  padding: 50px 20px;
+  background-color: #fff6e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.job-card .logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.job-card .details {
+  flex-grow: 1;
+}
+
+.job-card .details h3 {
+  margin: 0 0 5px 0;
+}
+
+.job-card .details p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.job-card .meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+.job-card .meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-card .meta i {
+  color: #1d624e;
+}
+
+.job-card .apply-btn {
+  background-color: #1d624e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.job-card .apply-btn:hover {
+  background-color: #15503f;
+}
+
+.job-page-header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(32, 32, 24, 0.5);
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job-page-header h2 {
+  font-size: 32px;
+}
+.job-page-header .back-btn a {
+  color: white;
+  text-decoration: none;
+}
