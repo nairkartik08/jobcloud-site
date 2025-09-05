@@ -35,20 +35,21 @@
     <p>Search thousands of jobs from top companies and start your career journey.</p>
     <a href="#" class="cta-btn">Get Started</a>
     <section class="job-posting">
-      <form class="search-form">
-        <div class="input-group">
-          <i class="fa-solid fa-briefcase"></i>
-          <input type="text" placeholder="Job Title or Company" required />
-        </div>
-        <div class="input-group">
-          <i class="fa-solid fa-location-dot"></i>
-          <input type="text" placeholder="Location (e.g., Mumbai)" />
-        </div>
-        <button type="submit" class="search-btn">
-          <i class="fa-solid fa-magnifying-glass"></i> Search
-        </button>
-      </form>
-    </section>
+  <form class="search-form" onsubmit="return searchJob(event)">
+    <div class="input-group">
+      <i class="fa-solid fa-briefcase"></i>
+      <input type="text" id="companyInput" placeholder="Job Title or Company" required />
+    </div>
+    <div class="input-group">
+      <i class="fa-solid fa-location-dot"></i>
+      <input type="text" placeholder="Location (e.g., Mumbai)" />
+    </div>
+    <button type="submit" class="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i> Search
+    </button>
+  </form>
+</section>
+
   </section>
 
   <section class="features">
@@ -75,12 +76,11 @@
   <section class="job-categories">
     <h2>Find the right job or internship for you</h2>
     <div class="category-tags">
-      <span>Engineering</span>
-      <span>Finance</span>
-      <span>Information Technology</span>
+      <span>Engineering</span><span>Finance</span>
+     <span>Information Technology</span>
       <span>Marketing</span>
-      <span>Product Management</span>
-      <span>Accounting</span>
+      <span>Accounting</span><span>Product Management</span>
+      
     </div>
   </section>
 
@@ -101,7 +101,9 @@
       </div>
     </div>
   </section>
-
+    
+    
+    
   <section class="customer-support">
     <h2>Need Help?</h2>
     <p>Our support team is here 24/7 to assist you with your queries.</p>
@@ -125,6 +127,7 @@
       </div>
     </div>
   </footer>
+<script src="search.js"></script>
 
 </body>
 </html>
