@@ -131,7 +131,76 @@
     </div>
   </footer>
 <script src="search.js"></script>
+<script>
+  const jobs = {
+  engineering: [
+    "Software Engineer - Google",
+    "Mechanical Engineer - Tata",
+    "Civil Engineer - L&T",
+    "Electrical Engineer - Siemens",
+    "Design Engineer - Infosys",
+    "Quality Engineer - Wipro"
+  ],
+  finance: [
+    "Financial Analyst - Deloitte",
+    "Investment Banker - HDFC",
+    "Tax Consultant - PwC",
+    "Account Manager - ICICI",
+    "Equity Research Analyst - Kotak",
+    "Risk Analyst - Axis Bank"
+  ],
+  it: [
+    "Full Stack Developer - Microsoft",
+    "Backend Developer - Amazon",
+    "Frontend Developer - Zoho",
+    "Data Scientist - IBM",
+    "DevOps Engineer - Infosys",
+    "AI Engineer - TCS"
+  ],
+  marketing: [
+    "Digital Marketing Executive - Flipkart",
+    "SEO Specialist - Zomato",
+    "Content Marketer - Swiggy",
+    "Brand Manager - HUL",
+    "Social Media Manager - Nykaa",
+    "PPC Analyst - Amazon"
+  ],
+  accounting: [
+    "Chartered Accountant - KPMG",
+    "Auditor - EY",
+    "Finance Executive - Deloitte",
+    "Payroll Specialist - Accenture",
+    "Accounts Payable Clerk - Infosys",
+    "Tax Analyst - PwC"
+  ],
+  product: [
+    "Product Manager - Google",
+    "Associate PM - Microsoft",
+    "Technical PM - Amazon",
+    "Product Analyst - Flipkart",
+    "Junior PM - Byju's",
+    "Product Strategist - Nykaa"
+  ]
+};
+
+const jobButtons = document.querySelectorAll(".job-btn");
+const jobList = document.getElementById("job-list");
+
+jobButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const category = btn.getAttribute("data-category");
+    const jobItems = jobs[category]
+      .map(job => `<div class="job-card">${job}</div>`)
+      .join("");
+    jobList.innerHTML = jobItems;
+  });
+});
+
+</script>
+</body>
+</html>
 
 </body>
 </html>
+
 
