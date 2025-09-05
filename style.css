@@ -281,18 +281,6 @@ button:hover {
   margin-bottom: 10px;
 }
 
-
-.category-tags a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-}
-
 .testimonials {
   padding: 60px 20px;
   background: #f0f0f0;
@@ -699,6 +687,67 @@ footer .social-icons a {
     width: 260px;
   }
 
+  /* Style for the container of job listings */
+.job-list-container {
+    padding: 20px;
+}
+
+/* Style for each individual job card */
+.job-card {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Vertically aligns items in the center */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+/* Style for the company logo image */
+.job-card .company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
+/* Style for the job details text */
+.job-card .job-details {
+    flex-grow: 1; /* Allows this section to take up available space */
+}
+
+.job-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.job-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Style for the Apply button */
+.job-card .apply-btn {
+    background-color: #4CAF50; /* A green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.job-card .apply-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+  
   footer {
     padding: 40px;
   }
