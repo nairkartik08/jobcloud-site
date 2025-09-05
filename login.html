@@ -65,11 +65,32 @@
 <body>
   <div class="login-container">
     <h2>Login to Job Cloud</h2>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <input type="password" placeholder="Enter your password" required>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
       <button type="submit">Login</button>
     </form>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const loginData = {
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value
+        };
+
+        const res = await fetch("http://localhost:5000/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(loginData)
+        });
+
+        const data = await res.text(); 
+        alert(data);
+      });
+    </script>
+
     <a href="#">Forgot Password?</a>
     <a href="signup.html">New User? Sign Up</a>
   </div>
