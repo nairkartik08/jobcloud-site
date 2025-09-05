@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Job Listings - Job Cloud</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #8c8a74; 
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    strong{
+        font-size: 32px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  right: 45px;
+  bottom: 2px;
+  left: 45px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  letter-spacing: 1px;
+    }
+    nav img {
+      width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px #ffffff80;
+  background-color: white;
+  padding: 5px;
+    }
+    nav a {
+     color: white;
+      margin-left: auto;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .company-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .company-header img {
+      width: 150px; 
+      margin-bottom: 15px;
+    }
+    .company-header h1 {
+      margin: 0;
+      font-size: 32px; 
+      color: #333;
+    }
+    .job-listings {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .job-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .job-card:hover {
+      transform: translateY(-3px);
+    }
+    .job-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .job-left img {
+  width: 65px;  
+  height: 65px;
+  border-radius: 8px;
+}
+.job-info h3 {
+  margin: 0;
+  font-size: 20px; 
+  font-weight: bold;
+  color: #1d624e;
+}
+.job-info p {
+  margin: 6px 0;
+  font-size: 16px;  
+  font-weight: 500;
+  color: #333;
+}
+
+    .job-tags {
+      display: flex;
+      gap: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .job-tags i {
+      margin-right: 5px;
+      color: #1d624e; 
+    }
+    .apply-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #1d624e; 
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .apply-btn:hover {
+      background: #134436;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: #8c8a74;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav>
+    <img src="jobcloud12.png" alt="Job Cloud Logo" />
+    <strong>Job Cloud</strong>
+    <a href="index.html">⬅ Back to Home</a>
+  </nav>
+
+
+  <div class="company-header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" />
+    <h1>Job Openings at Google</h1>
+  </div>
+
+ 
+  <section class="job-listings">
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>Software Engineer</h3>
+          <p>Google • Bengaluru</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> Hybrid</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 2+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>Cloud Architect</h3>
+          <p>Google • Hyderabad</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> On-site</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 5+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>UI/UX Designer</h3>
+          <p>Google • Remote</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> Remote</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 3+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>Data Scientist</h3>
+          <p>Google • Gurgaon</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> On-site</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 4+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>Product Manager</h3>
+          <p>Google • Mumbai</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> Hybrid</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 6+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+
+    <div class="job-card">
+      <div class="job-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+        <div class="job-info">
+          <h3>Technical Support Specialist</h3>
+          <p>Google • Chennai</p>
+          <div class="job-tags">
+            <span><i class="fa-solid fa-map-marker-alt"></i> On-site</span>
+            <span><i class="fa-solid fa-clock"></i> Full-time</span>
+            <span><i class="fa-solid fa-briefcase"></i> 1+ Years Exp</span>
+          </div>
+        </div>
+      </div>
+      <button class="apply-btn">Apply</button>
+    </div>
+  </section>
+
+ 
+  <footer>
+    <p>&copy; 2024 Job Cloud. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
