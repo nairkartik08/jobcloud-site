@@ -281,6 +281,18 @@ button:hover {
   margin-bottom: 10px;
 }
 
+
+.category-tags a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
 .testimonials {
   padding: 60px 20px;
   background: #f0f0f0;
