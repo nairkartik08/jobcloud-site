@@ -12,13 +12,13 @@ function searchJob(event) {
   };
 
   if (companyLocations[companyInput] && companyLocations[companyInput].includes(locationInput)) {
-    // If a company and location match are found, redirect to the company page
+   
     window.location.href = `${companyInput}-jobs.html`;
   } else if (companyLocations[companyInput]) {
-    
+    // If the company is found but the location isn't, alert the user
     alert(`No job postings found for ${companyInput} in ${locationInput}! Please try another location.`);
   } else {
-  
+
     alert("No job postings found for this company! Please try a different company name.");
   }
 }
