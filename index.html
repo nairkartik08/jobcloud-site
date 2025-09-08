@@ -18,16 +18,8 @@
     <div class="home"><a href="#">Home</a></div>
     <div class="connections"><a href="#">Connections</a></div>
     <div class="learning"><a href="#">Learning</a></div>
-    <div class="sign-in"><a href="login.html">Sign In</a></div>
-    <div class="profile dropdown">
-      <i class="fa-solid fa-user" style="color: #1d624e"></i>
-      <span class="profile-text">Profile</span>
-      <div class="dropdown-content">
-        <a href="#">View Profile</a>
-        <a href="#">Settings</a>
-        <a href="#">Sign Out</a>
-      </div>
-    </div>
+    <div id="auth-section"></div>
+
   </nav>
 
   <section class="hero">
@@ -126,9 +118,39 @@
     </div>
   </footer>
 <script src="search.js"></script>
+<script>
+  const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.reload();
+  }
+
+  const authSection = document.getElementById("auth-section");
+
+  if (loggedUser) {
+    authSection.innerHTML = `
+      <div class="profile dropdown">
+        <i class="fa-solid fa-user" style="color: #1d624e"></i>
+        <span class="profile-text">${loggedUser.fullName}</span>
+        <div class="dropdown-content">
+          <a href="#">View Profile</a>
+          <a href="#">Settings</a>
+          <a href="#" onclick="logout()">Sign Out</a>
+        </div>
+      </div>
+    `;
+  } else {
+    authSection.innerHTML = `
+      <div class="sign-in"><a href="login.html">Sign In</a></div>
+      <div class="sign-up"><a href="signup.html">Sign Up</a></div>
+    `;
+  }
+</script>
 
 </body>
 </html>
+
 
 
 
