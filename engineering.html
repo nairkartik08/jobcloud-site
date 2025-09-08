@@ -1,110 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Engineering Jobs - Job Cloud</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Jobs - JobCloud</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Engineering Jobs</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
 
-<nav>
-    <div class="logo">
-      <img src="jobcloud12.png" alt="Job Cloud Logo" />
-    </div>
-    <text>Job Cloud</text>
-    <div class="home"><a href="index.html">Back to Home</a></div>
-</nav>
+  <!-- Job list will load here -->
+  <div id="job-list" class="jobs-container"></div>
 
-<section class="job-page-header">
-    <h3>Job Openings in Engineering</h3>
-</section>
-
-<section class="job-cards-container">
-    <div class="job-card">
-        <div class="logo">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.wTTJzPfZUK8967z_Ul0rzgHaBq?pid=Api&P=0&h=180" alt="Honeywell Logo">
-        </div>
-        <div class="details">
-            <h3>Mechanical Engineer</h3>
-            <p>Honeywell • Bengaluru</p>
-            <div class="meta">
-                <span><i class="fa-solid fa-location-dot"></i> On-site</span>
-                <span><i class="fa-solid fa-clock"></i> Full-time</span>
-                <span><i class="fa-solid fa-briefcase"></i> 3+ Years Exp</span>
-            </div>
-        </div>
-        <a href="#" class="apply-btn">Apply</a>
-    </div>
-
-    <div class="job-card">
-        <div class="logo">
-            <img src="https://tse1.mm.bing.net/th/id/OIP.-szSb6FYheUXCJ9JiLAt6wHaFh?pid=Api&P=0&h=180" alt="L&T Logo">
-        </div>
-        <div class="details">
-            <h3>Civil Engineer</h3>
-            <p>L&T • Mumbai</p>
-            <div class="meta">
-                <span><i class="fa-solid fa-location-dot"></i> On-site</span>
-                <span><i class="fa-solid fa-clock"></i> Full-time</span>
-                <span><i class="fa-solid fa-briefcase"></i> 5+ Years Exp</span>
-            </div>
-        </div>
-        <a href="#" class="apply-btn">Apply</a>
-    </div>
-    
-    <div class="job-card">
-        <div class="logo">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.2_L1xUgdf-vc5YlkZJ2uBAHaEK?pid=Api&P=0&h=180" alt="Siemens Logo">
-        </div>
-        <div class="details">
-            <h3>Electrical Engineer</h3>
-            <p>Siemens • Pune</p>
-            <div class="meta">
-                <span><i class="fa-solid fa-location-dot"></i> On-site</span>
-                <span><i class="fa-solid fa-clock"></i> Full-time</span>
-                <span><i class="fa-solid fa-briefcase"></i> 2+ Years Exp</span>
-            </div>
-        </div>
-        <a href="#" class="apply-btn">Apply</a>
-    </div>
-    
-    <div class="job-card">
-        <div class="logo">
-            <img src="https://tse2.mm.bing.net/th/id/OIP.p2iwOwojwO0jjhM03aM3qgHaDz?pid=Api&P=0&h=180" alt="Bosch Logo">
-        </div>
-        <div class="details">
-            <h3>Robotics Engineer</h3>
-            <p>Bosch • Hyderabad</p>
-            <div class="meta">
-                <span><i class="fa-solid fa-location-dot"></i> Hybrid</span>
-                <span><i class="fa-solid fa-clock"></i> Full-time</span>
-                <span><i class="fa-solid fa-briefcase"></i> 4+ Years Exp</span>
-            </div>
-        </div>
-        <a href="#" class="apply-btn">Apply</a>
-    </div>
-
-</section>
-
-<footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Job Cloud. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      </div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
-      <div class="footer-contact">
-        <p>Contact us: <a href="mailto:contact@jobcloud.com">contact@jobcloud.com</a></p>
-      </div>
-    </div>
-</footer>
-
+  <script src="search.js"></script>
 </body>
 </html>
