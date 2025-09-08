@@ -2,28 +2,28 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const user = {
-    fullName: document.getElementById("fullName").value,
+    name: document.getElementById("name").value,   // must match backend
     email: document.getElementById("email").value,
     password: document.getElementById("password").value
   };
 
   try {
-    const res = await fetch("http://localhost:8080/api/users/signup", {
+    const response = await fetch("http://localhost:8080/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
     });
 
-    if (res.ok) {
-      const savedUser = await res.json();
-      localStorage.setItem("loggedInUser", JSON.stringify(savedUser));
+    if (response.ok) {
       alert("Signup successful!");
-      window.location.href = "index.html";
+      window.location.href = "login.html"; // redirect to login
     } else {
-      alert("Signup failed.");
+      const err = await response.json();
+      alert("Signup failed: " + (err.message || "Unknown error"));
     }
-  } catch (err) {
-    console.error(err);
-    alert("Error while signing up.");
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong!");
   }
 });
+
