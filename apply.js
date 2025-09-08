@@ -1,20 +1,35 @@
-const params = new URLSearchParams(window.location.search);
-const job = params.get("job");
-if (job) {
-  document.getElementById("jobTitle").innerText = job;
-}
+document.getElementById("apply-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const jobId = localStorage.getItem("selectedJobId");
+  if (!jobId) {
+    alert("No job selected!");
+    return;
+  }
 
-document.getElementById("applicationForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+  const application = {
+    job: { id: Number(jobId) },
+    applicantName: document.getElementById("applicantName").value,
+    email: document.getElementById("email").value,
+    resumeLink: document.getElementById("resumeLink").value
+  };
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const coverLetter = document.getElementById("coverLetter").value;
-  const resume = document.getElementById("resume").files[0];
+  try {
+    const res = await fetch("http://localhost:8080/api/applications", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(application)
+    });
 
-  alert(`✅ Application Submitted!\n\nJob: ${job}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nResume: ${resume ? resume.name : "Not uploaded"}\nCover Letter: ${coverLetter}`);
-
-  document.getElementById("applicationForm").reset();
+    if (res.ok) {
+      alert("Application submitted successfully!");
+      localStorage.removeItem("selectedJobId");
+      window.location.href = "index.html";
+    } else {
+      alert("Application failed. Try again.");
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    alert("Error submitting application.");
+  }
 });
