@@ -2,7 +2,7 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const user = {
-    fullName: document.getElementById("fullName").value, // match your Java field
+    name: document.getElementById("name").value,  // match User.java
     email: document.getElementById("email").value,
     password: document.getElementById("password").value
   };
@@ -16,7 +16,7 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
 
     if (response.ok) {
       alert("Signup successful!");
-      window.location.href = "login.html"; // go to login
+      window.location.href = "login.html";
     } else {
       const err = await response.json();
       alert("Signup failed: " + (err.message || "Unknown error"));
@@ -26,5 +26,3 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
     alert("Something went wrong!");
   }
 });
-
-
