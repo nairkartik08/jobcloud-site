@@ -814,3 +814,26 @@ footer .social-icons a {
   margin: auto;
   gap: 10px;
 }
+
+.sign-in, .sign-up {
+  margin-left: 15px;
+}
+
+.profile {
+  margin-left: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.profile:hover .dropdown-content {
+  display: block;
+}
