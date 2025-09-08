@@ -3,101 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Cloud - Sign Up</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .signup-container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 380px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      text-align: center;
-    }
-    .signup-container h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .signup-container input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-    .signup-container button {
-      width: 100%;
-      padding: 12px;
-      background: #2575fc;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .signup-container button:hover {
-      background: #1a5ed1;
-    }
-    .signup-container a {
-      display: block;
-      margin-top: 12px;
-      text-decoration: none;
-      color: #2575fc;
-      font-size: 14px;
-    }
-    .signup-container a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Signup - JobCloud</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="signup-container">
-    <h2>Create Your Account</h2>
-    <form id="signupForm">
-      <input type="text" id="fullname" placeholder="Full Name" required>
-      <input type="tel" id="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required>
-      <input type="date" id="dob" required>
-      <input type="email" id="email" placeholder="Email Address" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Sign Up</button>
-    </form>
+  <h1>Create Account</h1>
+  <form id="signup-form" class="auth-form">
+    <input id="fullName" type="text" placeholder="Full Name" required>
+    <input id="email" type="email" placeholder="Email" required>
+    <input id="password" type="password" placeholder="Password" required>
+    <button type="submit">Sign Up</button>
+  </form>
 
-    <script>
-      document.getElementById("signupForm").addEventListener("submit", async function(e) {
-        e.preventDefault(); // prevent page reload
-
-        const userData = {
-          fullname: document.getElementById("fullname").value,
-          mobile: document.getElementById("mobile").value,
-          dob: document.getElementById("dob").value,
-          email: document.getElementById("email").value,
-          password: document.getElementById("password").value
-        };
-
-        const res = await fetch("http://localhost:5000/signup", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(userData)
-        });
-
-        const data = await res.text();
-        alert(data);
-      });
-    </script>
-
-    <a href="login.html">Already have an account? Login</a>
-  </div>
+  <script src="signup.js"></script>
 </body>
 </html>
